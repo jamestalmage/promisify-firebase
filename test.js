@@ -3,9 +3,7 @@ import promisify from './';
 import Firebase from 'firebase';
 
 test('async methods', t => {
-	t.plan(2);
-
-	function blah(exists) {
+	function FirebaseStub(exists) {
 		this.once = (type, fn) => {
 			t.ok(type === 'value');
 			setImmediate(() => fn({
@@ -14,10 +12,17 @@ test('async methods', t => {
 		};
 	}
 
-	promisify(blah.prototype);
+	promisify(FirebaseStub.prototype);
 
-	var obj = new blah(true);
+	var obj = new FirebaseStub(true);
 
-	obj.exists().then(exists => t.ok(exists === true));
+	// uncomment the following and nyc is broken:
+
+	// new Firebase('https://test.firebaseio.test');
+
+	obj.exists().then(exists => {
+		t.ok(exists === true);
+		t.end();
+	});
 });
 

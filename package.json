@@ -13,7 +13,7 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "rm -rf coverage && nyc ava && nyc report --reporter=html"
+    "test": "rm -rf coverage .nyc_ouput && nyc ava && nyc report --reporter=html"
   },
   "files": [
     "index.js"
