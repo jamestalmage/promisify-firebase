@@ -13,7 +13,7 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "xo && nyc ava && nyc report --reporter=html"
+    "test": "nyc ava && nyc report --reporter=html"
   },
   "files": [
     "index.js"
@@ -24,6 +24,7 @@
   "devDependencies": {
     "ava": "^0.3.0",
     "firebase": "^2.3.1",
+    "firebase-copy": "^0.2.0",
     "nyc": "^3.2.2",
     "xo": "^0.10.0"
   },
