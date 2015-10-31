@@ -1,0 +1,38 @@
+{
+  "name": "promisify-firebase",
+  "version": "0.0.0",
+  "description": "My divine module",
+  "license": "MIT",
+  "repository": "jamestalmage/promisify-firebase",
+  "author": {
+    "name": "James Talmage",
+    "email": "james@talmage.io",
+    "url": "github.com/jamestalmage"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "xo && nyc ava && nyc report --reporter=html"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    ""
+  ],
+  "devDependencies": {
+    "ava": "^0.3.0",
+    "firebase": "^2.3.1",
+    "nyc": "^3.2.2",
+    "xo": "^0.10.0"
+  },
+  "xo": {
+    "ignores": [
+      "test.js"
+    ]
+  },
+  "dependencies": {
+    "native-or-bluebird": "^1.2.0"
+  }
+}
